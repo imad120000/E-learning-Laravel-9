@@ -105,17 +105,6 @@ Auth::routes();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //Admin
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware(['guest:admin', 'PreventBackHistory'])->group(function () {
@@ -186,6 +175,7 @@ Route::prefix('prof')->name('prof.')->group(function () {
         Route::get('/student', [ProfController::class, 'student'])->name('student');
         Route::get('/Enroll', [ProfController::class, 'enroll'])->name('enroll');
         Route::post('/Enroll/{id}', [ProfController::class, 'addenroll'])->name('addenroll');
+        Route::delete('/Enroll/{id}', [ProfController::class, 'deletenrol'])->name('deletenrol');
         Route::get('/review', [ProfController::class, 'review'])->name('review');
         Route::post('/logout',[ProfController::class,'logout'])->name('logout');
     });

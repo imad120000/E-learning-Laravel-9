@@ -18,7 +18,7 @@ Sign Up
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
                                             <h3 class="">Sign Up</h3>
-                                            <p>Already have an account? <a href="authentication-signin.html">Login</a>
+                                            <p>Already have an account? <a href="{{route('student.login')}}">Login</a>
                                             </p>
                                         </div>
 

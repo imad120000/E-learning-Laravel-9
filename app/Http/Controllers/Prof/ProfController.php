@@ -433,6 +433,17 @@ class ProfController extends Controller
         );
     }
 
+    public function deletenrol($id){
+
+        $enroll = demandecours::find($id);
+      
+        $enroll->delete();
+        return redirect()->back()->with([
+            'succes' => 'Delete avec Succes'
+        ]);
+
+    }
+
     public function review()
     {
 
